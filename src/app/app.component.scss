@@ -1,0 +1,101 @@
+main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1025px;
+  height: auto;
+  gap: 30px;
+}
+section{
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  background-color: #1f3862;
+  border-radius: 10px;
+  max-height: 500px;
+  height: 500px;
+  width: 250px;
+  gap: 30px;
+  padding: 20px;
+}
+.water-container{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ justify-content: space-between;
+ height: 100%;
+}
+h1{
+font-size: 18px;
+font-weight: bold;
+color: #fff;
+margin-bottom: auto;
+}
+.water-glass{
+  width: 150px;
+  height: 200px;
+  border: 2px solid #425981;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  span{
+    font-size: 34px;
+    font-weight: bold;
+  }
+  .per-symb{
+    font-size: 18px;
+  }
+}
+.water-glass::after{
+  content: "";
+  display: inline-block;
+  width: 146px;
+  height: 20px;
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 99
+}
+.btn-group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: auto;
+  margin-top: 20px;
+  width: 100%;
+  .btn-remove,.btn-add{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  span{
+    font-size: 20px;
+    color: #fff;
+  }
+  .btn-add{
+    background-color: #4570c0;
+    color: #1f3863;
+  }
+  .btn-remove{
+    background-color: #c95806;
+    color: #1f3863;
+  }
+}
+.btn-hide{
+  visibility: hidden;
+}
