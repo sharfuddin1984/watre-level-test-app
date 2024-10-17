@@ -1,15 +1,17 @@
 <!--Wrap conatiner page-->
 <main>
   <section>
-    <div class="water-container">
-     <h1>{{textHeading}}</h1>
-      <div class="water-glass">
-          <span>{{ waterLevel }}</span><span class="per-symb">%</span>
+    <h3>Drink Water</h3>
+    <button (click)="resetWaterLevel()" class="reset-button">Reset</button>
+    <div class="water-level-container">
+      <div class="cylinder">
+        <div class="water" [style.height.%]="waterLevelPercentage"></div>
+        <div class="percentage">{{ waterLevelPercentage | number: '1.0-0' }}%</div>
       </div>
-      <div class="btn-group">
-        <button *ngIf="waterLevel > 0" class="btn-remove" (click)="removeWater()">-</button>
-        <span>{{ waterLevel }} ml</span>
-        <button *ngIf="waterLevel < maxLimit" (click)="addWater()" class="btn-add" (click)="addWater()">+</button>
+      <div class="btn-group">        
+        <button (click)="removeWater()" [disabled]="waterLevel === 0" class="remove-button">−</button>
+        <div class="water-level-info">{{ waterLevel }} ml</div>
+        <button (click)="addWater()" [disabled]="waterLevel === maxLimit" class="add-button">+</button>
       </div>
     </div>
   </section>
